@@ -29,8 +29,8 @@ class Rsa:
         self.data = data
     
     def encrypt(self):
-        temp = self.data*self.data
-        count = 2
+        temp = self.data
+        count = 1
         while count < e:
             temp = temp*self.data
             if temp > n:
@@ -39,8 +39,8 @@ class Rsa:
         return temp
     
     def decrypt(self, edata):
-        temp = edata*edata
-        count = 2
+        temp = edata
+        count = 1
         while count < d:
             temp = temp*edata
             if temp > n:
